@@ -17,8 +17,8 @@ class ClassroomFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(),
-            'hours' => $this->faker->numberBetween(1, 4)
+            'user_id' => $this->faker->numberBetween(1, 6),
+            'course_id' => $this->faker->numberBetween(1, 5)
         ];
     }
 }

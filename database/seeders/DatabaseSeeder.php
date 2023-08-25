@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             $user->assignRole('Student');
         }
 
-        \App\Models\Classroom::factory(10)->create();
+        \App\Models\Course::factory(10)->create();
+        \App\Models\Classroom::factory(30)->create();
     }
 }

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Api\v1\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Resources\v1\UserResource;
 
 class UserController extends Controller
 {
@@ -12,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return UserResource::collection(User::latest()->paginate());
     }
 
     /**
